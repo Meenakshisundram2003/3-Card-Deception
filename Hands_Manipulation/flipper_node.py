@@ -1,4 +1,4 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
 
 # This file is: ~/ros2_ws/src/card_detector/card_detector/flipper_node.py
 
