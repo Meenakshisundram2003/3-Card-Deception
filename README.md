@@ -1,4 +1,4 @@
-# Decoding Deception: Autonomous Strategy Discovery via Hierarchical RL
+# Decoding Card Deception: Autonomous Strategy Discovery via Reinforcement Learning
 
 This repository contains the ongoing research and codebase for solving high-entropy physical states (modeled via the 3-Card and 4-Card trick) using a Partially Observable Markov Decision Process (POMDP) and Hierarchical Reinforcement Learning (HRL). 
 
