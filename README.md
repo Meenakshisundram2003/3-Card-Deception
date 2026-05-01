@@ -43,6 +43,7 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 ├── Hands_Manipulation/
 │   ├── flipper_node.py                    # ROS 2 Cartesian execution node (3-Card)
 │   └── flipper_node_4.py                  # ROS 2 Cartesian execution node (4-Card)
+|
 ├── launch_camera.sh                       # Script: Starts RealSense Camera
 ├── run_detector.sh                        # Script: Starts YOLO Vision Node
 ├── run_flipper.sh                         # Script: Starts Cartesian Execution Node (3-Card)
@@ -50,6 +51,7 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 ├── run_brain.sh                           # Script: Starts Logic Brain Node (3-Card)
 ├── run_brain_4.sh                         # Script: Starts Logic Brain Node (4-Card)
 ├── start_magic.sh                         # Script: Publishes Start Command
+├── LICENSE                                # MIT License file
 └── README.md
 ```
 ## 🚀 Getting Started
@@ -121,5 +123,18 @@ For a deep dive into the POMDP formulation, the "multiverse" reward structure, a
 * [Master's Thesis: Decoding the Card Trick](./docs/Decoding-the-Card-Trick-Autonomous-Strategy-Discovery-via-Reinforcement-Learning.pdf)
 * [Defense Presentation Slides](./docs/Thesis_Presentation-Final.pdf)
 
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📝 Citation
+If you utilize this heuristic-free POMDP framework or the decoupled PPO architecture in your research, please cite:
+
+@mastersthesis{subramanian2026decoding,
+  title={Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning},
+  author={Ganapathi Subramanian, Meenakshisundram},
+  year={2026},
+  school={Arizona State University},
+  type={Master's Thesis}
+}
 
 
