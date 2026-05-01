@@ -4,6 +4,11 @@ This repository contains the software stack for solving high-entropy physical st
 
 This heuristic-free active perception framework was developed for and deployed on the Hello Robot Stretch 3 mobile manipulator.
 
+## 🎥 System Demonstrations
+
+Watch the Stretch 3 mobile manipulator execute the heuristic-free active perception strategy in real-time.
+* [**Watch the physical 3-Card and 4-Card strategy execution here**](YOUR_LINKEDIN_POST_URL_HERE)
+
 ## 🧠 System Architecture
 
 To solve the credit assignment problem inherent in standard RL, this architecture decouples the task into two Proximal Policy Optimization (PPO) networks, translating to three distinct asynchronous ROS 2 modules:
