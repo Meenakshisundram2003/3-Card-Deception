@@ -7,7 +7,7 @@ This heuristic-free active perception framework was developed for and deployed o
 ## 🎥 System Demonstrations
 
 Watch the Stretch 3 mobile manipulator execute the heuristic-free active perception strategy in real-time.
-* [**Watch the physical 3-Card and 4-Card strategy execution here**](YOUR_LINKEDIN_POST_URL_HERE)
+* [**Watch the physical 3-Card and 4-Card strategy execution here**](https://www.linkedin.com/posts/meenakshisundramg_robotics-reinforcementlearning-computervision-activity-7455909353750126592-cluS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADygdiwBZW0WD-thNoOUJRY9uuJ7dbKhFpE)
 
 ## 🧠 System Architecture
 
