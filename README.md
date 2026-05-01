@@ -45,3 +45,11 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 │   └── flipper_node_4.py                  # ROS 2 Cartesian execution node (4-Card)
 │
 └── README.md
+```
+## 🚀 Getting Started
+
+### Dependencies
+Ensure you have ROS 2 (Humble recommended) installed. You can install all the required Python packages for the RL agents, YOLOv8 vision pipeline, and LLM interaction directly via `pip`:
+
+```bash
+pip install stable-baselines3 ultralytics gymnasium torch gTTS openai numpy pandas
