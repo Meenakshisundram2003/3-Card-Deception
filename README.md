@@ -4,7 +4,7 @@ This repository contains the software stack for solving high-entropy physical st
 
 This heuristic-free active perception framework was developed for and deployed on the Hello Robot Stretch 3 mobile manipulator.
 
-## System Architecture
+## 🧠 System Architecture
 
 To solve the credit assignment problem inherent in standard RL, this architecture decouples the task into two Proximal Policy Optimization (PPO) networks, translating to three distinct asynchronous ROS 2 modules:
 
@@ -92,20 +92,20 @@ To run the full decoupled pipeline, execute the following shell scripts in separ
 **Terminal 3: Start the Physical Execution & Persona**
 *(You will be prompted to securely enter your OpenAI API key for the LLM interaction)*
 
-# For 3-Card Deception:
+#### For 3-Card Deception:
 ./run_flipper.sh
 
-# For 4-Card Cyclic Shift:
+#### For 4-Card Cyclic Shift:
 ./run_flipper_4.sh
 
 
 **Terminal 4: Initialize the Logic Brain**
 *Pass the initial known state of the board as arguments.*
 
-# For 3-Card Deception (Left, Middle, Right):
+#### For 3-Card Deception (Left, Middle, Right):
 ./run_brain.sh 'AS' 'KH' 'QD'
 
-# For 4-Card Cyclic Shift (Index 0, 1, 2, 3):
+#### For 4-Card Cyclic Shift (Index 0, 1, 2, 3):
 ./run_brain_4.sh 'AS' 'KH' 'QD' 'JC'
 
 
