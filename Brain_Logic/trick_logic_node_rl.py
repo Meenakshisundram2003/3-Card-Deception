@@ -33,7 +33,7 @@ class TrickLogicNodeRL(Node):
             self.brain_scout = None
         else:
             self.brain_scout = PPO.load(self.path_scout)
-            self.get_logger().info("✅ Brain 1 (Scout) Loaded.")
+            self.get_logger().info("Brain 1 (Scout) Loaded.")
 
         # 2. Load Brain 2 (The Detective - Logic)
         if not os.path.exists(self.path_detective):
@@ -41,7 +41,7 @@ class TrickLogicNodeRL(Node):
             self.brain_detective = None
         else:
             self.brain_detective = PPO.load(self.path_detective)
-            self.get_logger().info("✅ Brain 2 (Detective) Loaded.")
+            self.get_logger().info("Brain 2 (Detective) Loaded.")
 
         # Map Card Names -> Index (0, 1, 2)
         self.CARD_TO_INDEX = {
@@ -63,19 +63,14 @@ class TrickLogicNodeRL(Node):
         self.waiting_for_detection = False
         self.optimal_sensor_index = None # Store Brain 1's decision
 
-        self.get_logger().info("--- TWO-BRAIN SYSTEM READY. Waiting for /start_trick ---")
 
     def start_callback(self, msg):
-        self.get_logger().info("\n" + "="*40)
-        self.get_logger().info("PHASE 1: PERCEPTION PLANNING (Brain 1)")
        
         if self.brain_scout:
             # Brain 1 takes a dummy input [0.0] and outputs the best index to flip
             action, _ = self.brain_scout.predict(np.array([0.0]), deterministic=True)
             self.optimal_sensor_index = int(action)
            
-            self.get_logger().info(f"🧠 Brain 1 Decision: The optimal sensor location is INDEX {self.optimal_sensor_index}.")
-            self.get_logger().info("🤖 Robot Action: Moving to flip card...")
         else:
             self.get_logger().warn("Brain 1 not loaded! Defaulting to Index 0.")
             self.optimal_sensor_index = 0
@@ -103,8 +98,6 @@ class TrickLogicNodeRL(Node):
     def get_result_callback(self, future):
         result = future.result().result
         if result.success:
-            self.get_logger().info("✅ Flip Complete.")
-            self.get_logger().info("PHASE 2: WAITING FOR OBSERVATION...")
             self.waiting_for_detection = True
         else:
             self.get_logger().error("Flip Action Failed!")
@@ -125,12 +118,9 @@ class TrickLogicNodeRL(Node):
         obs_value = self.CARD_TO_INDEX.get(detected_label)
        
         if obs_value is None:
-            self.get_logger().warn(f"⚠️ I see {detected_label}, but it's not part of the trick!")
+            self.get_logger().warn(f"I see {detected_label}, but it's not part of the trick!")
             return
 
-        self.get_logger().info("\n" + "="*40)
-        self.get_logger().info("PHASE 3: LOGICAL DEDUCTION (Brain 2)")
-        self.get_logger().info(f"👁️  Sensor Reading: {detected_label} (Val {obs_value})")
 
         # 2. Ask Brain 2 (The Detective)
         # Input: The value of the single card we see [obs_value]
@@ -141,14 +131,13 @@ class TrickLogicNodeRL(Node):
         predicted_card_code = self.INDEX_TO_CARD.get(predicted_user_choice_index, "Unknown")
         spoken_card_name = self.get_spoken_name(predicted_card_code)
        
-        self.get_logger().info(f"🧠 Brain 2 Inference: Pattern matches User Choice {predicted_user_choice_index}")
-        self.get_logger().info(f"🎉 FINAL PREDICTION: {predicted_card_code}")
+        self.get_logger().info(f"FINAL PREDICTION: {predicted_card_code}")
         self.get_logger().info("="*40 + "\n")
        
         # 3. Speak Result
         self.waiting_for_detection = False
         speech_msg = String()
-        speech_msg.data = f"My neural network predicts you picked the {spoken_card_name}"
+        speech_msg.data = f"You picked the {spoken_card_name}"
         self.speech_pub.publish(speech_msg)
 
 def main(args=None):
