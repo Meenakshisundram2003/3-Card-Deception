@@ -121,16 +121,5 @@ For a deep dive into the POMDP formulation, the "multiverse" reward structure, a
 * [Master's Thesis: Decoding the Card Trick](./docs/Decoding-the-Card-Trick-Autonomous-Strategy-Discovery-via-Reinforcement-Learning.pdf)
 * [Defense Presentation Slides](./docs/Thesis_Presentation-Final.pdf)
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📝 Citation
-If you utilize this heuristic-free POMDP framework or the decoupled PPO architecture in your research, please cite:
 
-@mastersthesis{subramanian2026decoding,
-  title={Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning},
-  author={Subramanian, Meenakshisundram Ganapathi},
-  year={2026},
-  school={Arizona State University},
-  type={Master's Thesis}
-}
