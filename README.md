@@ -1,6 +1,6 @@
 # Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning
 
-This repository contains the software stack for solving high-entropy physical states—specifically modeled via the 3-Card and 4-Card Deception benchmarks—using a Partially Observable Markov Decision Process (POMDP) and Hierarchical Reinforcement Learning (HRL). 
+This repository contains the software stack for solving high-entropy physical states—specifically modeled via the 3-Card and 4-Card Deception benchmarks—using a Partially Observable Markov Decision Process (POMDP) and Reinforcement Learning (RL). 
 
 This heuristic-free active perception framework was developed for and deployed on the Hello Robot Stretch 3 mobile manipulator.
 
