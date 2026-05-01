@@ -51,6 +51,7 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 ├── run_brain.sh                           # Script: Starts Logic Brain Node (3-Card)
 ├── run_brain_4.sh                         # Script: Starts Logic Brain Node (4-Card)
 ├── start_magic.sh                         # Script: Publishes Start Command
+├── .gitignore                             # Ignores .venv, __pycache__, and .DS_Store
 ├── LICENSE                                # MIT License file
 └── README.md
 ```
