@@ -57,5 +57,80 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 ### Dependencies
 Ensure you have ROS 2 (Humble recommended) installed. You can install all the required Python packages for the RL agents, YOLOv8 vision pipeline, and LLM interaction directly via `pip`:
 
-```bash
 pip install stable-baselines3 ultralytics gymnasium torch gTTS openai numpy pandas
+
+*Note: Low-level hardware execution also requires the Hello Robot `stretch_body` API to be configured on your machine.*
+
+### Workspace Setup
+Clone this repository into your ROS 2 workspace:
+
+cd ~/ros2_ws/src
+git clone https://github.com/Meenakshisundram2003/3-Card-Deception.git
+cd ~/ros2_ws
+colcon build --packages-select Brain_Logic Eyes_Perception Hands_Manipulation
+source install/setup.bash
+
+
+Before running the scripts, ensure they are executable:
+
+chmod +x launch_camera.sh run_detector.sh run_flipper.sh run_flipper_4.sh run_brain.sh run_brain_4.sh start_magic.sh
+
+
+### Execution Flow
+To run the full decoupled pipeline, execute the following shell scripts in separate terminals:
+
+**Terminal 1: Launch the Hardware Camera**
+
+./launch_camera.sh
+
+
+**Terminal 2: Start the YOLO Vision Pipeline**
+
+./run_detector.sh
+
+
+**Terminal 3: Start the Physical Execution & Persona**
+*(You will be prompted to securely enter your OpenAI API key for the LLM interaction)*
+
+# For 3-Card Deception:
+./run_flipper.sh
+
+# For 4-Card Cyclic Shift:
+./run_flipper_4.sh
+
+
+**Terminal 4: Initialize the Logic Brain**
+*Pass the initial known state of the board as arguments.*
+
+# For 3-Card Deception (Left, Middle, Right):
+./run_brain.sh 'AS' 'KH' 'QD'
+
+# For 4-Card Cyclic Shift (Index 0, 1, 2, 3):
+./run_brain_4.sh 'AS' 'KH' 'QD' 'JC'
+
+
+**Terminal 5: Trigger the Magic Sequence**
+*Once all nodes are active and the human participant is ready, publish the start command.*
+
+./start_magic.sh
+
+
+## 📖 Read the Research
+
+For a deep dive into the POMDP formulation, the "multiverse" reward structure, and the sim-to-real domain adaptation, you can read the full academic documentation here:
+* [Master's Thesis: Decoding the Card Trick](./docs/Decoding-the-Card-Trick-Autonomous-Strategy-Discovery-via-Reinforcement-Learning.pdf)
+* [Defense Presentation Slides](./docs/Thesis_Presentation-Final.pdf)
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📝 Citation
+If you utilize this heuristic-free POMDP framework or the decoupled PPO architecture in your research, please cite:
+
+@mastersthesis{subramanian2026decoding,
+  title={Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning},
+  author={Subramanian, Meenakshisundram Ganapathi},
+  year={2026},
+  school={Arizona State University},
+  type={Master's Thesis}
+}
