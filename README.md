@@ -50,7 +50,8 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 │   └── flipper_node_4.py                  # ROS 2 Cartesian execution node (4-Card)
 |
 ├── docs/
-│   ├── Thesis_Presentation-Final.pdf      # Presentation slides 
+│   ├── Decoding_the_Card_Trick_Auton      # Full thesis detailing POMDP formulation
+│   └── Thesis_Presentation-Final.pdf      # Slide deck from the official defense
 |
 ├── launch_camera.sh                       # Script: Starts RealSense Camera
 ├── run_detector.sh                        # Script: Starts YOLO Vision Node
@@ -59,6 +60,7 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 ├── run_brain.sh                           # Script: Starts Logic Brain Node (3-Card)
 ├── run_brain_4.sh                         # Script: Starts Logic Brain Node (4-Card)
 ├── start_magic.sh                         # Script: Publishes Start Command
+|
 ├── .gitignore                             # Ignores .venv, __pycache__, and .DS_Store
 ├── LICENSE                                # MIT License file
 └── README.md
@@ -129,7 +131,8 @@ To run the full decoupled pipeline, execute the following shell scripts in separ
 ## 📖 Read the Research
 
 For a deep dive into the POMDP formulation, the "multiverse" reward structure, and the sim-to-real domain adaptation, you can read the full academic documentation here:
-* [Master's Thesis: Decoding the Card Trick](https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2?accountid=4485)
+* [**Master's Thesis: Decoding the Card Trick (PDF)**](./docs/Decoding_the_Card_Trick_Auton.pdf)
+* [**Defense Presentation Slides (PDF)**](./docs/Thesis_Presentation-Final.pdf)
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -137,5 +140,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📝 Citation
 If you utilize this heuristic-free POMDP framework or the decoupled PPO architecture in your research, please cite:
 
-Subramanian, M. G. (2026). Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning (Order No. 32582765). Available from Dissertations & Theses @ Arizona State University; ProQuest Dissertations & Theses Global. (3335835673). https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2
+> Subramanian, M. G. (2026). *Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning* (Order No. 32582765). Available from Dissertations & Theses @ Arizona State University; ProQuest Dissertations & Theses Global. (3335835673). https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2
 
