@@ -72,16 +72,16 @@ pip install stable-baselines3 ultralytics gymnasium torch gTTS openai numpy pand
 ### Workspace Setup
 Clone this repository into your ROS 2 workspace:
 
-cd ~/ros2_ws/src
-git clone https://github.com/Meenakshisundram2003/3-Card-Deception.git
-cd ~/ros2_ws
-colcon build --packages-select Brain_Logic Eyes_Perception Hands_Manipulation
-source install/setup.bash
+cd ~/ros2_ws/src  
+git clone https://github.com/Meenakshisundram2003/3-Card-Deception.git  
+cd ~/ros2_ws  
+colcon build --packages-select Brain_Logic Eyes_Perception Hands_Manipulation  
+source install/setup.bash  
 
 
 Before running the scripts, ensure they are executable:
 
-chmod +x launch_camera.sh run_detector.sh run_flipper.sh run_flipper_4.sh run_brain.sh run_brain_4.sh start_magic.sh
+chmod +x launch_camera.sh run_detector.sh run_flipper.sh run_flipper_4.sh run_brain.sh run_brain_4.sh start_magic.sh  
 
 
 ### Execution Flow
