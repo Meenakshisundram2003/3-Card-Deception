@@ -49,6 +49,9 @@ To solve the credit assignment problem inherent in standard RL, this architectur
 │   ├── flipper_node.py                    # ROS 2 Cartesian execution node (3-Card)
 │   └── flipper_node_4.py                  # ROS 2 Cartesian execution node (4-Card)
 |
+├── docs/
+│   ├── Thesis_Presentation-Final.pdf      # Presentation slides 
+|
 ├── launch_camera.sh                       # Script: Starts RealSense Camera
 ├── run_detector.sh                        # Script: Starts YOLO Vision Node
 ├── run_flipper.sh                         # Script: Starts Cartesian Execution Node (3-Card)
