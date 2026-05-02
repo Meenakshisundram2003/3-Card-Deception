@@ -130,7 +130,6 @@ To run the full decoupled pipeline, execute the following shell scripts in separ
 
 For a deep dive into the POMDP formulation, the "multiverse" reward structure, and the sim-to-real domain adaptation, you can read the full academic documentation here:
 * [Master's Thesis: Decoding the Card Trick](https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2?accountid=4485)
-* [Defense Presentation Slides](./docs/Thesis_Presentation-Final.pdf)
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
