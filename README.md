@@ -126,7 +126,7 @@ To run the full decoupled pipeline, execute the following shell scripts in separ
 ## 📖 Read the Research
 
 For a deep dive into the POMDP formulation, the "multiverse" reward structure, and the sim-to-real domain adaptation, you can read the full academic documentation here:
-* [Master's Thesis: Decoding the Card Trick](./docs/Decoding-the-Card-Trick-Autonomous-Strategy-Discovery-via-Reinforcement-Learning.pdf)
+* [Master's Thesis: Decoding the Card Trick]([./docs/Decoding-the-Card-Trick-Autonomous-Strategy-Discovery-via-Reinforcement-Learning.pdf](https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2?accountid=4485))
 * [Defense Presentation Slides](./docs/Thesis_Presentation-Final.pdf)
 
 ## 📄 License
@@ -135,12 +135,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📝 Citation
 If you utilize this heuristic-free POMDP framework or the decoupled PPO architecture in your research, please cite:
 
-@mastersthesis{subramanian2026decoding,
-  title={Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning},
-  author={Ganapathi Subramanian, Meenakshisundram},
-  year={2026},
-  school={Arizona State University},
-  type={Master's Thesis}
-}
-
+Subramanian, M. G. (2026). Decoding the Card Trick: Autonomous Strategy Discovery via Reinforcement Learning (Order No. 32582765). Available from Dissertations & Theses @ Arizona State University; ProQuest Dissertations & Theses Global. (3335835673). https://login.ezproxy1.lib.asu.edu/login?url=https://www.proquest.com/dissertations-theses/decoding-card-trick-autonomous-strategy-discovery/docview/3335835673/se-2
 
